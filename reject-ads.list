@@ -1,0 +1,72 @@
+# NAME: reject-ads.list
+# DESCRIPTION: Рекламные и трекинговые домены → REJECT
+# AUTHOR: Leo (generated, based on zeklop + additions)
+# UPDATED: 2026-04-10
+
+# === Рекламные сети и трекеры ===
+DOMAIN-KEYWORD,adjust
+DOMAIN-KEYWORD,adfox
+DOMAIN-KEYWORD,adriver
+DOMAIN-KEYWORD,appmetrica
+DOMAIN-KEYWORD,appsflyersdk
+
+# === Яндекс реклама/аналитика ===
+DOMAIN-SUFFIX,an.yandex.ru
+DOMAIN-SUFFIX,mc.webvisor.org
+DOMAIN-SUFFIX,yabs.yandex.ru
+DOMAIN-SUFFIX,log.strm.yandex.ru
+DOMAIN-SUFFIX,yadro.ru
+
+# === Mail.ru реклама ===
+DOMAIN-SUFFIX,ad.mail.ru
+DOMAIN-SUFFIX,xray.mail.ru
+DOMAIN-SUFFIX,portal.mail.ru
+DOMAIN-SUFFIX,bar.love.mail.ru
+DOMAIN-SUFFIX,top-fwz1.mail.ru
+
+# === Российские счётчики ===
+DOMAIN-SUFFIX,st.top100.ru
+DOMAIN-SUFFIX,tns-counter.ru
+DOMAIN-SUFFIX,counter.reddigital.ru
+
+# === Google реклама/трекинг ===
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,collector.github.com
+
+# === Прочие трекеры ===
+DOMAIN-SUFFIX,static.cloudflareinsights.com
+DOMAIN-SUFFIX,static.hotjar.com
+DOMAIN-SUFFIX,adroll.com
+DOMAIN-SUFFIX,refersion.com
+DOMAIN-SUFFIX,pxaction.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,clarity.ms
+DOMAIN-SUFFIX,demdex.net
+DOMAIN-SUFFIX,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,ingest.sentry.io
+DOMAIN-SUFFIX,push4site.com
+DOMAIN-SUFFIX,slackb.com
+DOMAIN-SUFFIX,liftoff.io
+DOMAIN-SUFFIX,vungle.com
+
+# === Мобильные трекеры ===
+DOMAIN-SUFFIX,tracking.intl.miui.com
+DOMAIN-SUFFIX,tracking.rus.miui.com
+DOMAIN-SUFFIX,dit.whatsapp.net
+DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-SUFFIX,stocks-analytics-events.apple.com
+DOMAIN-SUFFIX,metrics.icloud.com
+DOMAIN-SUFFIX,app-analytics-services.com
+
+# === Мусор ===
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,mon-va.byteoversea.com
+DOMAIN-SUFFIX,sgali-mcs.byteoversea.com
+DOMAIN-SUFFIX,cstatic.weborama.fr
+DOMAIN-SUFFIX,us04logfiles.zoom.us
+DOMAIN-SUFFIX,dsp.upravel.com
+DOMAIN-SUFFIX,visor.sberbank.ru
+DOMAIN-SUFFIX,intelliscapesolutions.com
+DOMAIN-SUFFIX,luxcdn.com
+DOMAIN-SUFFIX,fsdifhj.com

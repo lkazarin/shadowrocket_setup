@@ -1,0 +1,96 @@
+# NAME: russia-direct.list
+# DESCRIPTION: Российские домены и сервисы → DIRECT
+# AUTHOR: Leo (generated)
+# UPDATED: 2026-04-10
+# LOGIC: Ловит российские сервисы на НЕ-.ru доменах.
+#        Домены .ru и .рф перехватываются через DOMAIN-SUFFIX ниже.
+#        Российские IP перехватываются через GEOIP,RU в основном конфиге.
+
+# === Российские TLD ===
+DOMAIN-SUFFIX,ru
+DOMAIN-SUFFIX,su
+DOMAIN-SUFFIX,xn--p1ai
+
+# === Яндекс (все сервисы) ===
+DOMAIN-KEYWORD,yandex
+DOMAIN-KEYWORD,yastatic
+DOMAIN-SUFFIX,ya.ru
+DOMAIN-SUFFIX,yandex.com
+DOMAIN-SUFFIX,yandex.net
+DOMAIN-SUFFIX,yandex.com.tr
+DOMAIN-SUFFIX,yastatic.net
+DOMAIN-SUFFIX,yx.api.mobi
+DOMAIN-SUFFIX,yandexcloud.net
+DOMAIN-SUFFIX,yandex.cloud
+DOMAIN-SUFFIX,yandexgpt.com
+
+# === ВКонтакте / Mail.ru / VK экосистема ===
+DOMAIN-SUFFIX,vk.com
+DOMAIN-SUFFIX,vk.me
+DOMAIN-SUFFIX,vk.cc
+DOMAIN-SUFFIX,vkontakte.com
+DOMAIN-SUFFIX,userapi.com
+DOMAIN-SUFFIX,vk-cdn.net
+DOMAIN-SUFFIX,vkuser.net
+DOMAIN-SUFFIX,vkuseraudio.net
+DOMAIN-SUFFIX,vkuservideo.net
+DOMAIN-SUFFIX,mail.ru
+DOMAIN-SUFFIX,mradx.net
+DOMAIN-SUFFIX,mycdn.me
+DOMAIN-SUFFIX,imgsmail.ru
+
+# === Одноклассники ===
+DOMAIN-SUFFIX,ok.ru
+DOMAIN-SUFFIX,odnoklassniki.ru
+DOMAIN-SUFFIX,odkl.ru
+
+# === Telegram (домены для веб-интерфейса — сам трафик IM по IP) ===
+# NB: Telegram ЗАБЛОКИРОВАН в РФ, но его домены тут НЕ нужны —
+#     они пойдут через FINAL→PROXY. Оставлено закомментированным для справки.
+# DOMAIN-SUFFIX,telegram.org
+# DOMAIN-SUFFIX,t.me
+
+# === Сбер / банки ===
+DOMAIN-SUFFIX,sberbank.com
+DOMAIN-SUFFIX,sber.cloud
+DOMAIN-SUFFIX,sbercloud.ru
+
+# === Wildberries ===
+DOMAIN-SUFFIX,wildberries.am
+DOMAIN-SUFFIX,wildberries.by
+DOMAIN-SUFFIX,wildberries.kz
+DOMAIN-SUFFIX,wbstatic.net
+DOMAIN-SUFFIX,wbbasket.ru
+DOMAIN-SUFFIX,wbcontent.net
+
+# === Ozon ===
+DOMAIN-SUFFIX,ozon.com
+
+# === Avito ===
+# avito.ru покрывается через .ru
+
+# === МТС / Мегафон / Билайн / Теле2 ===
+DOMAIN-SUFFIX,mts.com
+DOMAIN-SUFFIX,megafon.com
+DOMAIN-SUFFIX,beeline.com
+DOMAIN-SUFFIX,tele2.com
+
+# === Прочие российские сервисы на .com/.net/.io ===
+DOMAIN-SUFFIX,kaspersky.com
+DOMAIN-SUFFIX,kaspersky-labs.com
+DOMAIN-SUFFIX,2gis.com
+DOMAIN-SUFFIX,drom.com
+DOMAIN-SUFFIX,ivi.tv
+DOMAIN-SUFFIX,kinopoisk.hd
+DOMAIN-SUFFIX,more.tv
+DOMAIN-SUFFIX,wink.rt
+DOMAIN-SUFFIX,rutube.com
+
+# === Госуслуги и смежные ===
+# gosuslugi.ru покрывается через .ru
+DOMAIN-SUFFIX,gosuslugi.com
+
+# === CDN и инфраструктура российских сервисов ===
+DOMAIN-SUFFIX,cdnvideo.ru
+DOMAIN-SUFFIX,ngenix.net
+DOMAIN-SUFFIX,yadro.cloud
