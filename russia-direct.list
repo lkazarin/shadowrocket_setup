@@ -1,61 +1,156 @@
 # NAME: russia-direct.list
 # DESCRIPTION: Российские домены и сервисы → DIRECT
-# AUTHOR: Leo (generated)
-# UPDATED: 2026-04-10
-# LOGIC: Ловит российские сервисы на НЕ-.ru доменах.
-#        Домены .ru и .рф перехватываются через DOMAIN-SUFFIX ниже.
-#        Российские IP перехватываются через GEOIP,RU в основном конфиге.
+# SOURCES: zimbabwe303/domain-list-ru_direct + ручные дополнения
+# UPDATED: 2026-04-11
+#
+# Домены .ru и .рф перехватываются через DOMAIN-SUFFIX ниже.
+# Российские IP дополнительно перехватываются через GEOIP,RU в основном конфиге.
 
-# === Российские TLD ===
+# ============================================================
+# Российские и кириллические TLD
+# ============================================================
 DOMAIN-SUFFIX,ru
 DOMAIN-SUFFIX,su
+DOMAIN-SUFFIX,com.ru
+DOMAIN-SUFFIX,net.ru
+DOMAIN-SUFFIX,org.ru
+DOMAIN-SUFFIX,pp.ru
+DOMAIN-SUFFIX,exnet.su
+DOMAIN-SUFFIX,ru.net
 DOMAIN-SUFFIX,xn--p1ai
+DOMAIN-SUFFIX,xn--d1acj3b
+DOMAIN-SUFFIX,xn--80adxhks
+DOMAIN-SUFFIX,xn--80asehdb
+DOMAIN-SUFFIX,xn--c1avg
+DOMAIN-SUFFIX,xn--p1acf
+DOMAIN-SUFFIX,xn--80aswg
 
-# === Яндекс (все сервисы) ===
+# ============================================================
+# Яндекс (все сервисы и домены)
+# ============================================================
 DOMAIN-KEYWORD,yandex
 DOMAIN-KEYWORD,yastatic
 DOMAIN-SUFFIX,ya.ru
-DOMAIN-SUFFIX,yandex.com
-DOMAIN-SUFFIX,yandex.net
-DOMAIN-SUFFIX,yandex.com.tr
-DOMAIN-SUFFIX,yastatic.net
-DOMAIN-SUFFIX,yx.api.mobi
-DOMAIN-SUFFIX,yandexcloud.net
+DOMAIN-SUFFIX,dzen.ru
+DOMAIN-SUFFIX,yandex.aero
+DOMAIN-SUFFIX,yandex.az
+DOMAIN-SUFFIX,yandex.by
 DOMAIN-SUFFIX,yandex.cloud
-DOMAIN-SUFFIX,yandexgpt.com
+DOMAIN-SUFFIX,yandex.co.il
+DOMAIN-SUFFIX,yandex.com
+DOMAIN-SUFFIX,yandex.com.am
+DOMAIN-SUFFIX,yandex.com.ge
+DOMAIN-SUFFIX,yandex.com.tr
+DOMAIN-SUFFIX,yandex.com.ua
+DOMAIN-SUFFIX,yandex.de
+DOMAIN-SUFFIX,yandex.ee
+DOMAIN-SUFFIX,yandex.eu
+DOMAIN-SUFFIX,yandex.fi
+DOMAIN-SUFFIX,yandex.fr
+DOMAIN-SUFFIX,yandex.jobs
+DOMAIN-SUFFIX,yandex.kg
+DOMAIN-SUFFIX,yandex.kz
+DOMAIN-SUFFIX,yandex.lt
+DOMAIN-SUFFIX,yandex.lv
+DOMAIN-SUFFIX,yandex.market
+DOMAIN-SUFFIX,yandex.md
+DOMAIN-SUFFIX,yandex.net
+DOMAIN-SUFFIX,yandex.org
+DOMAIN-SUFFIX,yandex.pl
+DOMAIN-SUFFIX,yandex.st
+DOMAIN-SUFFIX,yandex.sx
+DOMAIN-SUFFIX,yandex.taxi
+DOMAIN-SUFFIX,yandex.tj
+DOMAIN-SUFFIX,yandex.tm
+DOMAIN-SUFFIX,yandex.travel
+DOMAIN-SUFFIX,yandex.ua
+DOMAIN-SUFFIX,yandex.uz
+DOMAIN-SUFFIX,yandex.video
+DOMAIN-SUFFIX,yandexcloud.net
+DOMAIN-SUFFIX,yandexdatafactory.com
+DOMAIN-SUFFIX,yastatic.net
+DOMAIN-SUFFIX,zenadservices.net
 
-# === ВКонтакте / Mail.ru / VK экосистема ===
+# ============================================================
+# ВКонтакте / VK экосистема
+# ============================================================
 DOMAIN-SUFFIX,vk.com
-DOMAIN-SUFFIX,vk.me
 DOMAIN-SUFFIX,vk.cc
+DOMAIN-SUFFIX,vk.design
+DOMAIN-SUFFIX,vk.link
+DOMAIN-SUFFIX,vk.me
+DOMAIN-SUFFIX,vk.ru
 DOMAIN-SUFFIX,vkontakte.com
+DOMAIN-SUFFIX,vkontakte.ru
 DOMAIN-SUFFIX,userapi.com
+DOMAIN-SUFFIX,vk-cdn.me
 DOMAIN-SUFFIX,vk-cdn.net
+DOMAIN-SUFFIX,vk-combo.com
+DOMAIN-SUFFIX,vk-portal.net
+DOMAIN-SUFFIX,vkcache.com
+DOMAIN-SUFFIX,vkgo.app
+DOMAIN-SUFFIX,vklive.app
+DOMAIN-SUFFIX,vkmessenger.app
+DOMAIN-SUFFIX,vkmessenger.com
+DOMAIN-SUFFIX,vkombo.com
 DOMAIN-SUFFIX,vkuser.net
-DOMAIN-SUFFIX,vkuseraudio.net
+DOMAIN-SUFFIX,vkuseraudio.com
+DOMAIN-SUFFIX,vkuserlive.net
+DOMAIN-SUFFIX,vkuservideo.com
 DOMAIN-SUFFIX,vkuservideo.net
-DOMAIN-SUFFIX,mail.ru
+DOMAIN-SUFFIX,mvk.com
 DOMAIN-SUFFIX,mradx.net
-DOMAIN-SUFFIX,mycdn.me
-DOMAIN-SUFFIX,imgsmail.ru
 
-# === Одноклассники ===
+# ============================================================
+# Mail.ru / Одноклассники
+# ============================================================
+DOMAIN-SUFFIX,mail.ru
+DOMAIN-SUFFIX,imgsmail.ru
+DOMAIN-SUFFIX,mycdn.me
 DOMAIN-SUFFIX,ok.ru
-DOMAIN-SUFFIX,odnoklassniki.ru
 DOMAIN-SUFFIX,odkl.ru
 
-# === Telegram (домены для веб-интерфейса — сам трафик IM по IP) ===
-# NB: Telegram ЗАБЛОКИРОВАН в РФ, но его домены тут НЕ нужны —
-#     они пойдут через FINAL→PROXY. Оставлено закомментированным для справки.
-# DOMAIN-SUFFIX,telegram.org
-# DOMAIN-SUFFIX,t.me
+# ============================================================
+# Госуслуги и госсервисы
+# ============================================================
+DOMAIN-SUFFIX,gosuslugi.ru
+DOMAIN-SUFFIX,gosuslugi.com
+DOMAIN-SUFFIX,government.ru
+DOMAIN-SUFFIX,gov.ru
+DOMAIN-SUFFIX,cbr.ru
+DOMAIN-SUFFIX,edu.ru
+DOMAIN-SUFFIX,emias.info
+DOMAIN-SUFFIX,gu-st.ru
+DOMAIN-SUFFIX,mgfoms.ru
+DOMAIN-SUFFIX,nalog.ru
 
-# === Сбер / банки ===
+# ============================================================
+# Российские сервисы на НЕ-.ru доменах (ruext)
+# ============================================================
+DOMAIN-SUFFIX,24smi.net
+DOMAIN-SUFFIX,2gis.com
+DOMAIN-SUFFIX,adhigh.net
+DOMAIN-SUFFIX,alfabank.st
+DOMAIN-SUFFIX,diginetica.com
+DOMAIN-SUFFIX,diginetica.net
+DOMAIN-SUFFIX,flocktory.com
+DOMAIN-SUFFIX,gestalt.email
+DOMAIN-SUFFIX,trbcdn.net
+DOMAIN-SUFFIX,group-ib.com
+
+# ============================================================
+# Банки и финансы
+# ============================================================
 DOMAIN-SUFFIX,sberbank.com
 DOMAIN-SUFFIX,sber.cloud
-DOMAIN-SUFFIX,sbercloud.ru
+DOMAIN-SUFFIX,tinkoff.com
+DOMAIN-SUFFIX,tbank.com
+DOMAIN-SUFFIX,vtb.com
 
-# === Wildberries ===
+# ============================================================
+# Маркетплейсы и e-commerce
+# ============================================================
+DOMAIN-SUFFIX,ozon.com
 DOMAIN-SUFFIX,wildberries.am
 DOMAIN-SUFFIX,wildberries.by
 DOMAIN-SUFFIX,wildberries.kz
@@ -63,34 +158,161 @@ DOMAIN-SUFFIX,wbstatic.net
 DOMAIN-SUFFIX,wbbasket.ru
 DOMAIN-SUFFIX,wbcontent.net
 
-# === Ozon ===
-DOMAIN-SUFFIX,ozon.com
-
-# === Avito ===
-# avito.ru покрывается через .ru
-
-# === МТС / Мегафон / Билайн / Теле2 ===
+# ============================================================
+# Телеком
+# ============================================================
 DOMAIN-SUFFIX,mts.com
 DOMAIN-SUFFIX,megafon.com
 DOMAIN-SUFFIX,beeline.com
 DOMAIN-SUFFIX,tele2.com
 
-# === Прочие российские сервисы на .com/.net/.io ===
-DOMAIN-SUFFIX,kaspersky.com
-DOMAIN-SUFFIX,kaspersky-labs.com
-DOMAIN-SUFFIX,2gis.com
-DOMAIN-SUFFIX,drom.com
+# ============================================================
+# Медиа и стриминг
+# ============================================================
 DOMAIN-SUFFIX,ivi.tv
-DOMAIN-SUFFIX,kinopoisk.hd
 DOMAIN-SUFFIX,more.tv
 DOMAIN-SUFFIX,wink.rt
 DOMAIN-SUFFIX,rutube.com
+DOMAIN-SUFFIX,kinopoisk.hd
 
-# === Госуслуги и смежные ===
-# gosuslugi.ru покрывается через .ru
-DOMAIN-SUFFIX,gosuslugi.com
+# ============================================================
+# IT и облака
+# ============================================================
+DOMAIN-SUFFIX,kaspersky.com
+DOMAIN-SUFFIX,kaspersky-labs.com
+DOMAIN-SUFFIX,drweb.com
 
-# === CDN и инфраструктура российских сервисов ===
+# ============================================================
+# CDN и инфраструктура
+# ============================================================
 DOMAIN-SUFFIX,cdnvideo.ru
 DOMAIN-SUFFIX,ngenix.net
 DOMAIN-SUFFIX,yadro.cloud
+
+# ============================================================
+# Региональные домены (.ru.* и .su.*)
+# Города и субъекты РФ — ~120 доменов
+# ============================================================
+DOMAIN-SUFFIX,mos.ru
+DOMAIN-SUFFIX,spb.ru
+DOMAIN-SUFFIX,spb.su
+DOMAIN-SUFFIX,msk.ru
+DOMAIN-SUFFIX,msk.su
+DOMAIN-SUFFIX,nsk.ru
+DOMAIN-SUFFIX,nn.ru
+DOMAIN-SUFFIX,ekburg.ru
+DOMAIN-SUFFIX,kazan.ru
+DOMAIN-SUFFIX,krasnodar.su
+DOMAIN-SUFFIX,krasnoyarsk.ru
+DOMAIN-SUFFIX,novosibirsk.ru
+DOMAIN-SUFFIX,omsk.ru
+DOMAIN-SUFFIX,perm.ru
+DOMAIN-SUFFIX,samara.ru
+DOMAIN-SUFFIX,saratov.ru
+DOMAIN-SUFFIX,voronezh.ru
+DOMAIN-SUFFIX,volgograd.ru
+DOMAIN-SUFFIX,vladivostok.ru
+DOMAIN-SUFFIX,irk.ru
+DOMAIN-SUFFIX,irkutsk.ru
+DOMAIN-SUFFIX,khabarovsk.ru
+DOMAIN-SUFFIX,chel.ru
+DOMAIN-SUFFIX,chelyabinsk.ru
+DOMAIN-SUFFIX,rostov.ru
+DOMAIN-SUFFIX,rnd.ru
+DOMAIN-SUFFIX,tula.ru
+DOMAIN-SUFFIX,tula.su
+DOMAIN-SUFFIX,tver.ru
+DOMAIN-SUFFIX,tyumen.ru
+DOMAIN-SUFFIX,tomsk.ru
+DOMAIN-SUFFIX,tom.ru
+DOMAIN-SUFFIX,ulan-ude.ru
+DOMAIN-SUFFIX,vladikavkaz.ru
+DOMAIN-SUFFIX,vladimir.ru
+DOMAIN-SUFFIX,vologda.ru
+DOMAIN-SUFFIX,vrn.ru
+DOMAIN-SUFFIX,yaroslavl.ru
+DOMAIN-SUFFIX,yakutia.ru
+DOMAIN-SUFFIX,penza.ru
+DOMAIN-SUFFIX,pskov.ru
+DOMAIN-SUFFIX,ryazan.ru
+DOMAIN-SUFFIX,smolensk.ru
+DOMAIN-SUFFIX,tambov.ru
+DOMAIN-SUFFIX,ivanovo.ru
+DOMAIN-SUFFIX,kaluga.ru
+DOMAIN-SUFFIX,kostroma.ru
+DOMAIN-SUFFIX,kursk.ru
+DOMAIN-SUFFIX,kurgan.ru
+DOMAIN-SUFFIX,kirov.ru
+DOMAIN-SUFFIX,lipetsk.ru
+DOMAIN-SUFFIX,magadan.ru
+DOMAIN-SUFFIX,murmansk.ru
+DOMAIN-SUFFIX,nalchik.ru
+DOMAIN-SUFFIX,orb.ru
+DOMAIN-SUFFIX,oryol.ru
+DOMAIN-SUFFIX,sakhalin.ru
+DOMAIN-SUFFIX,surgut.ru
+DOMAIN-SUFFIX,stavropol.ru
+DOMAIN-SUFFIX,stv.ru
+DOMAIN-SUFFIX,belgorod.ru
+DOMAIN-SUFFIX,bryansk.ru
+DOMAIN-SUFFIX,amur.ru
+DOMAIN-SUFFIX,arkhangelsk.ru
+DOMAIN-SUFFIX,astrakhan.ru
+DOMAIN-SUFFIX,bashkiria.ru
+DOMAIN-SUFFIX,buryatia.ru
+DOMAIN-SUFFIX,cbg.ru
+DOMAIN-SUFFIX,chita.ru
+DOMAIN-SUFFIX,chukotka.ru
+DOMAIN-SUFFIX,chuvashia.ru
+DOMAIN-SUFFIX,crimea.ru
+DOMAIN-SUFFIX,dagestan.ru
+DOMAIN-SUFFIX,izhevsk.ru
+DOMAIN-SUFFIX,jamal.ru
+DOMAIN-SUFFIX,kalmykia.ru
+DOMAIN-SUFFIX,kamchatka.ru
+DOMAIN-SUFFIX,karelia.ru
+DOMAIN-SUFFIX,kchr.ru
+DOMAIN-SUFFIX,kemerovo.ru
+DOMAIN-SUFFIX,khakassia.ru
+DOMAIN-SUFFIX,khv.ru
+DOMAIN-SUFFIX,koenig.ru
+DOMAIN-SUFFIX,kuban.ru
+DOMAIN-SUFFIX,mari-el.ru
+DOMAIN-SUFFIX,mari.ru
+DOMAIN-SUFFIX,marine.ru
+DOMAIN-SUFFIX,mordovia.ru
+DOMAIN-SUFFIX,mosreg.ru
+DOMAIN-SUFFIX,psk.ru
+DOMAIN-SUFFIX,ptz.ru
+DOMAIN-SUFFIX,pyatigorsk.ru
+DOMAIN-SUFFIX,rkomi.ru
+DOMAIN-SUFFIX,sev.ru
+DOMAIN-SUFFIX,sevastopol.ru
+DOMAIN-SUFFIX,simbirsk.ru
+DOMAIN-SUFFIX,tatarstan.ru
+DOMAIN-SUFFIX,togliatti.su
+DOMAIN-SUFFIX,tuva.ru
+DOMAIN-SUFFIX,udm.ru
+DOMAIN-SUFFIX,udmurtia.ru
+DOMAIN-SUFFIX,vl.ru
+DOMAIN-SUFFIX,vlg.ru
+DOMAIN-SUFFIX,vyatka.ru
+DOMAIN-SUFFIX,altai.ru
+DOMAIN-SUFFIX,adygeya.ru
+DOMAIN-SUFFIX,bir.ru
+DOMAIN-SUFFIX,grozny.ru
+DOMAIN-SUFFIX,i-ola.ru
+DOMAIN-SUFFIX,jar.ru
+DOMAIN-SUFFIX,kustanai.ru
+DOMAIN-SUFFIX,mytis.ru
+DOMAIN-SUFFIX,nov.ru
+DOMAIN-SUFFIX,obninsk.su
+DOMAIN-SUFFIX,sochi.su
+DOMAIN-SUFFIX,tsk.ru
+DOMAIN-SUFFIX,yuzhno-sakhalinsk.ru
+
+# ============================================================
+# Tailscale (PROXY, не DIRECT — роутится через VPS)
+# Раскомментируй, если Tailscale установлен на VPS
+# ============================================================
+# IP-CIDR,100.64.0.0/10,PROXY
