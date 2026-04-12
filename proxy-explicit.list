@@ -1,18 +1,15 @@
 # NAME: proxy-explicit.list
 # DESCRIPTION: Критичные заблокированные сервисы → явный PROXY
-# AUTHOR: Leo (generated)
-# UPDATED: 2026-04-10
+# AUTHOR: Leo
+# UPDATED: 2026-04-12
 # LOGIC: Эти домены ДОЛЖНЫ идти через прокси в любом случае.
 #        Даже если FINAL→PROXY их бы и так перехватил,
-#        явное правило гарантирует работу и исключает конфликты с DIRECT.
+#        явное правило гарантирует работу и исключает конфликты с DIRECT/GEOIP.
 
 # === Discord ===
 DOMAIN-KEYWORD,discord
-DOMAIN-KEYWORD,discordapp
-DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discord.media
-DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 DOMAIN-SUFFIX,discordcdn.com
 DOMAIN-SUFFIX,dis.gd
@@ -24,20 +21,20 @@ DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,telegra.ph
-IP-CIDR,91.108.4.0/22
-IP-CIDR,91.108.8.0/22
-IP-CIDR,91.108.12.0/22
-IP-CIDR,91.108.16.0/22
-IP-CIDR,91.108.20.0/22
-IP-CIDR,91.108.56.0/22
-IP-CIDR,149.154.160.0/20
-IP-CIDR,185.76.151.0/24
-IP-CIDR6,2001:b28:f23d::/48
-IP-CIDR6,2001:b28:f23f::/48
-IP-CIDR6,2001:67c:4e8::/48
-IP-CIDR6,2a0a:f280::/32
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/22,no-resolve
+IP-CIDR,91.108.12.0/22,no-resolve
+IP-CIDR,91.108.16.0/22,no-resolve
+IP-CIDR,91.108.20.0/22,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,185.76.151.0/24,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,no-resolve
+IP-CIDR6,2001:67c:4e8::/48,no-resolve
+IP-CIDR6,2a0a:f280::/32,no-resolve
 
-# === Meta (Instagram, Facebook, WhatsApp) ===
+# === Meta (Instagram, Facebook, WhatsApp, Threads) ===
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,fbsbx.com
@@ -48,6 +45,8 @@ DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,wa.me
+DOMAIN-SUFFIX,threads.net
 
 # === Twitter/X ===
 DOMAIN-SUFFIX,twitter.com
@@ -71,7 +70,6 @@ DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,google.com.ua
 
 # === AI-сервисы ===
 DOMAIN-SUFFIX,openai.com
@@ -84,6 +82,9 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,runwayml.com
 
 # === LinkedIn ===
 DOMAIN-SUFFIX,linkedin.com
@@ -94,16 +95,41 @@ DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,spotifycdn.com
 
+# === Twitch ===
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,twitchcdn.net
+DOMAIN-SUFFIX,jtvnw.net
+
+# === Viber ===
+DOMAIN-SUFFIX,viber.com
+DOMAIN-SUFFIX,viber.media
+
+# === Signal ===
+DOMAIN-SUFFIX,signal.org
+DOMAIN-SUFFIX,whispersystems.org
+
 # === Notion ===
 DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notion.site
 DOMAIN-SUFFIX,notionusercontent.com
+
+# === Figma ===
+DOMAIN-SUFFIX,figma.com
+DOMAIN-SUFFIX,figma.net
 
 # === JetBrains ===
 DOMAIN-SUFFIX,jetbrains.com
 
+# === SoundCloud ===
+DOMAIN-SUFFIX,soundcloud.com
+DOMAIN-SUFFIX,sndcdn.com
+
+# === Roblox ===
+DOMAIN-SUFFIX,roblox.com
+DOMAIN-SUFFIX,rbxcdn.com
+
 # === Прочие заблокированные/проблемные из РФ ===
 DOMAIN-SUFFIX,medium.com
-DOMAIN-SUFFIX,soundcloud.com
 DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,dailymotion.com
 DOMAIN-SUFFIX,archive.org
@@ -111,7 +137,6 @@ DOMAIN-SUFFIX,protonmail.com
 DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,nordvpn.com
 DOMAIN-SUFFIX,mullvad.net
-DOMAIN-SUFFIX,signal.org
 DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,canva.dev
 DOMAIN-SUFFIX,cloudflare.com
@@ -119,7 +144,17 @@ DOMAIN-SUFFIX,hackernoon.com
 DOMAIN-SUFFIX,hostinger.com
 DOMAIN-SUFFIX,habr.com
 
-# === Финансы (заблокированные из РФ) ===
+# === Независимые СМИ (заблокированы в РФ) ===
+DOMAIN-SUFFIX,meduza.io
+DOMAIN-SUFFIX,mediazona.ca
+DOMAIN-SUFFIX,novayagazeta.eu
+DOMAIN-SUFFIX,theins.ru
+DOMAIN-SUFFIX,dozhd.tv
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,bbc.co.uk
+DOMAIN-SUFFIX,dw.com
+
+# === Финансы (заблокированные/ушедшие из РФ) ===
 DOMAIN-KEYWORD,bybit
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,payoneer.com
