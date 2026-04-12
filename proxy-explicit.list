@@ -1,6 +1,6 @@
 # NAME: proxy-explicit.list
 # DESCRIPTION: Критичные заблокированные сервисы → явный PROXY
-# AUTHOR: Leo
+# AUTHOR: Claude
 # UPDATED: 2026-04-12
 # LOGIC: Эти домены ДОЛЖНЫ идти через прокси в любом случае.
 #        Даже если FINAL→PROXY их бы и так перехватил,
