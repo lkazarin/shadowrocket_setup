@@ -310,9 +310,3 @@ DOMAIN-SUFFIX,obninsk.su
 DOMAIN-SUFFIX,sochi.su
 DOMAIN-SUFFIX,tsk.ru
 DOMAIN-SUFFIX,yuzhno-sakhalinsk.ru
-
-# ============================================================
-# Tailscale (PROXY, не DIRECT — роутится через VPS)
-# Раскомментируй, если Tailscale установлен на VPS
-# ============================================================
-# IP-CIDR,100.64.0.0/10,PROXY
